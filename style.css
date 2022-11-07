@@ -67,6 +67,15 @@ ul li a {
 	text-decoration: none;
 }
 
+#promociones {
+	/* display: inline-block; */
+  	padding: 20px;
+  	transition: all ease-in-out 250ms;
+	color: white;
+	font-size: 30pt;
+	text-align: center;
+}
+
 a:hover{ 
 	color: #ff4c79;
 
@@ -80,6 +89,15 @@ a:hover{
   grid-template-areas: 
     "cont cont2"; 
 }
+
+#containerPromos {
+	display: grid; 
+	grid-template-columns: 1fr ; 
+	grid-template-rows: 1fr; 
+	gap: 0px 3px; 
+	grid-template-areas: 
+	  "cont cont2"; 
+  }
 
 .cont {
 	font-size: 20px;
@@ -101,6 +119,36 @@ footer {
 }
 
 section{
+	padding: 20px;
+}
+
+h1{
+	color: #ff4c79;
+	font-size: 25pt;
+	text-align: center;
+}
+
+h2{
+	color: #24a19c;
+	font-size: 20pt;
+	text-align: center;
+}
+
+h3{
+	color: #fff;
+}
+
+p{
+	color: #2d292a;
+	font-size: 15pt;
+	text-align: left;
+}
+
+span{
+	color: black;
+}
+
+.nosotros{
 	padding: 20px;
 }
 
@@ -145,7 +193,7 @@ section{
 	}
 
 	.gallery{
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 1fr 1fr;
 		grid-template-areas: 
 		"zona1 zona2"
 		"zona3 zona4"
@@ -156,7 +204,68 @@ section{
 		font-size: 1rem;
 	}
 
+
+
 }
+
+
+
+@media (min-width: 600){
+
+	header {
+		width: 100%;
+	}
+
+	nav {
+    width: max-content;
+	}
+
+	ul li {
+		border-bottom: 1px solid;
+		border-color: #fff;
+		width: 100%;
+		padding: 16px;
+		text-align: left;
+	}
+
+	.hide {
+		color: #ff4c79;
+		text-align: center;
+		width: 100%;
+    display: block;
+  	}
+
+  	nav ul {
+ 	 display: none;
+	}
+
+  	.grid-container{
+	grid-template-columns: 200px auto;
+	grid-template-rows: 100px 50px auto 100px;
+	column-gap: 1rem;
+	background-color: rgb(255, 255, 255);
+	row-gap: 1rem;
+	grid-template:
+	"contenido"
+	"publicidad";
+	}
+
+	.gallery{
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: 
+		"zona1 zona2"
+		"zona3 zona4"
+		"zona5 zona6";
+	}
+
+	.gallery_picture::before{
+		font-size: 1rem;
+	}
+
+	
+
+}
+
 
 .gallery{
 	padding-bottom: 3em;
@@ -331,4 +440,10 @@ section{
 
 .gallery_picture-g6:hover::before{
 	transform: scale(1) rotate(360deg);
+}
+
+
+
+.gallery_picture-g7{
+	grid-area: zona1 zona2 zona3;
 }
