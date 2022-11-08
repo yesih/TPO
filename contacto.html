@@ -47,7 +47,7 @@
         		<section>
 
         			<div class="container">
-                <form class="row mt-3 g-3 needs-validation" novalidate>
+                <form id="my-form"  class="row mt-3 g-3 needs-validation" novalidate action="https://formspree.io/f/mjvzjgkn" method="POST" >
 
                   <div class="col-6 positionrelative">  
                       <label for="nameId" class="form-label">Nombre</label>
@@ -75,7 +75,7 @@
                       
                   <div class="col-9 position-relative"  >
                     <label for="mailId" class="form-label">Email</label>
-                    <input type="text" class="form-control" id="mailId" required>
+                    <input type="email" name="email" class="form-control" id="mailId" required>
                     <div class="valid-tooltip">
                       Todo bien
                     </div>
@@ -96,11 +96,15 @@
                         </div>
                     </div>
 
-                      <button type="submit" class="btn btn-primary">Enviar</button>
+                      <button id="my-form-button"  type="submit" class="btn btn-primary">Enviar</button>
 
 
 
                     </div>  
+			
+		    <p id="my-form-status"></p>
+
+                    </form>
 
 
                   </div>
